@@ -1,0 +1,24 @@
+{
+  "name": "vibe-agent-audit",
+  "version": "0.1.0",
+  "description": "Audit small agent and skill repositories for basic open source maintenance readiness.",
+  "type": "module",
+  "bin": {
+    "vibe-agent-audit": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm.cmd run build && node --test test/*.test.mjs",
+    "lint": "node scripts/lint.mjs",
+    "demo": "npm.cmd run build && node dist/cli.js --path fixtures/healthy-agent-repo"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
